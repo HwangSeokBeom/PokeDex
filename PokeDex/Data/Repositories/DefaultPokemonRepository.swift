@@ -27,16 +27,17 @@ final class DefaultPokemonRepository: PokemonRepository {
             method: .get
         )
 
-        let items: [PokemonSummary] = dto.results.compactMap { item in
+        let items: [PokemonSummary] = dto.results.compactMap { item -> PokemonSummary? in
             guard let id = item.extractedID else { return nil }
 
             let korean = translator.koreanName(for: item.name)
-            let imageURL = URL(string:
-              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(id).png"
-            )!
+            guard let imageURL = URL(string:
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(id).png"
+            ) else { return nil }
 
             return PokemonSummary(
                 id: id,
+                englishName: item.name,
                 koreanName: korean,
                 imageURL: imageURL
             )
@@ -45,8 +46,8 @@ final class DefaultPokemonRepository: PokemonRepository {
         let nextOffset = offset + limit < dto.count ? offset + limit : nil
 
         return PokemonListPage(
-            items: items,
             totalCount: dto.count,
+            items: items,
             nextOffset: nextOffset
         )
     }

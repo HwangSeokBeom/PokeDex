@@ -8,7 +8,6 @@
 import Foundation
 
 struct Endpoint {
-
     let baseURL: URL
     let path: String
     let queryItems: [URLQueryItem]
@@ -31,14 +30,28 @@ struct Endpoint {
             throw NetworkError.invalidURL
         }
 
-        if !queryItems.isEmpty {
-            components.queryItems = queryItems
-        }
-
-        guard let url = components.url else {
-            throw NetworkError.invalidURL
-        }
-
+        if !queryItems.isEmpty { components.queryItems = queryItems }
+        guard let url = components.url else { throw NetworkError.invalidURL }
         return url
+    }
+}
+
+extension Endpoint {
+    static func pokemonList(limit: Int, offset: Int) -> Endpoint {
+        Endpoint(
+            path: "pokemon",
+            queryItems: [
+                URLQueryItem(name: "limit", value: "\(limit)"),
+                URLQueryItem(name: "offset", value: "\(offset)")
+            ]
+        )
+    }
+
+    static func pokemonDetail(id: Int) -> Endpoint {
+        Endpoint(path: "pokemon/\(id)")
+    }
+
+    static func pokemonSpecies(id: Int) -> Endpoint {
+        Endpoint(path: "pokemon-species/\(id)")
     }
 }

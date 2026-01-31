@@ -18,3 +18,9 @@ struct PokemonListItemDTO: Decodable {
     let name: String
     let url: String
 }
+
+extension PokemonListItemDTO {
+    var extractedID: Int? {
+        url.split(separator: "/").compactMap { Int($0) }.last
+    }
+}

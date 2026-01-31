@@ -17,10 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: scene)
 
-        let viewController = ViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let rootVC = DIContainer.shared.makePokemonListViewController()
+            let nav = UINavigationController(rootViewController: rootVC)
+
         
-        window?.rootViewController = navigationController
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }
 
