@@ -12,7 +12,6 @@ enum HTTPMethod: String {
 }
 
 protocol HTTPClient {
-    /// Decodable 응답을 바로 받아오는 고수준 API
     func send<T: Decodable>(
         _ type: T.Type,
         endpoint: Endpoint,

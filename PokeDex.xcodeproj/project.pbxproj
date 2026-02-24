@@ -6,11 +6,36 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		8B76C7902F472DD9003ADAEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B9141672F2B752500BC8166 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B91416E2F2B752500BC8166;
+			remoteInfo = PokeDex;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8B76C78C2F472DD9003ADAEB /* PokeDexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeDexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B91416F2F2B752600BC8166 /* PokeDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8B76C7952F472DEB003ADAEB /* Exceptions for "PokeDexTests" folder in "PokeDex" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				UseCases/TestDoubles/SpyPokemonRepository.swift,
+			);
+			target = 8B91416E2F2B752500BC8166 /* PokeDex */;
+		};
+		8B76C7962F472DEB003ADAEB /* Exceptions for "PokeDexTests" folder in "PokeDexTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				UseCases/TestDoubles/SpyPokemonRepository.swift,
+			);
+			target = 8B76C78B2F472DD9003ADAEB /* PokeDexTests */;
+		};
 		8B9141812F2B752800BC8166 /* Exceptions for "PokeDex" folder in "PokeDex" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -21,6 +46,15 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8B76C78D2F472DD9003ADAEB /* PokeDexTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8B76C7952F472DEB003ADAEB /* Exceptions for "PokeDexTests" folder in "PokeDex" target */,
+				8B76C7962F472DEB003ADAEB /* Exceptions for "PokeDexTests" folder in "PokeDexTests" target */,
+			);
+			path = PokeDexTests;
+			sourceTree = "<group>";
+		};
 		8B9141712F2B752600BC8166 /* PokeDex */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -32,6 +66,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8B76C7892F472DD9003ADAEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B91416C2F2B752500BC8166 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				8B9141712F2B752600BC8166 /* PokeDex */,
+				8B76C78D2F472DD9003ADAEB /* PokeDexTests */,
 				8B9141702F2B752600BC8166 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				8B91416F2F2B752600BC8166 /* PokeDex.app */,
+				8B76C78C2F472DD9003ADAEB /* PokeDexTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +104,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8B76C78B2F472DD9003ADAEB /* PokeDexTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B76C7922F472DD9003ADAEB /* Build configuration list for PBXNativeTarget "PokeDexTests" */;
+			buildPhases = (
+				8B76C7882F472DD9003ADAEB /* Sources */,
+				8B76C7892F472DD9003ADAEB /* Frameworks */,
+				8B76C78A2F472DD9003ADAEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B76C7912F472DD9003ADAEB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8B76C78D2F472DD9003ADAEB /* PokeDexTests */,
+			);
+			name = PokeDexTests;
+			packageProductDependencies = (
+			);
+			productName = PokeDexTests;
+			productReference = 8B76C78C2F472DD9003ADAEB /* PokeDexTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8B91416E2F2B752500BC8166 /* PokeDex */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B9141822F2B752800BC8166 /* Build configuration list for PBXNativeTarget "PokeDex" */;
@@ -93,6 +159,10 @@
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					8B76C78B2F472DD9003ADAEB = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 8B91416E2F2B752500BC8166;
+					};
 					8B91416E2F2B752500BC8166 = {
 						CreatedOnToolsVersion = 26.2;
 					};
@@ -113,11 +183,19 @@
 			projectRoot = "";
 			targets = (
 				8B91416E2F2B752500BC8166 /* PokeDex */,
+				8B76C78B2F472DD9003ADAEB /* PokeDexTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8B76C78A2F472DD9003ADAEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B91416D2F2B752500BC8166 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +206,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8B76C7882F472DD9003ADAEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B91416B2F2B752500BC8166 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,7 +222,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8B76C7912F472DD9003ADAEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B91416E2F2B752500BC8166 /* PokeDex */;
+			targetProxy = 8B76C7902F472DD9003ADAEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8B76C7932F472DD9003ADAEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63SB2B8YJ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hwb.PokeDexTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokeDex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PokeDex";
+			};
+			name = Debug;
+		};
+		8B76C7942F472DD9003ADAEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63SB2B8YJ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hwb.PokeDexTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokeDex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PokeDex";
+			};
+			name = Release;
+		};
 		8B9141832F2B752800BC8166 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -332,6 +467,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8B76C7922F472DD9003ADAEB /* Build configuration list for PBXNativeTarget "PokeDexTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B76C7932F472DD9003ADAEB /* Debug */,
+				8B76C7942F472DD9003ADAEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8B91416A2F2B752500BC8166 /* Build configuration list for PBXProject "PokeDex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

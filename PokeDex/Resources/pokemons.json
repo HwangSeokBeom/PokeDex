@@ -1,0 +1,49 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "name": "bulbasaur",
+      "korean_name": "이상해씨",
+      "height_dm": 7,
+      "weight_hg": 69,
+      "types": ["grass", "poison"],
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+    },
+    {
+      "id": 2,
+      "name": "ivysaur",
+      "korean_name": "이상해풀",
+      "height_dm": 10,
+      "weight_hg": 130,
+      "types": ["grass", "poison"],
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+    },
+    {
+      "id": 3,
+      "name": "venusaur",
+      "korean_name": "이상해꽃",
+      "height_dm": 20,
+      "weight_hg": 1000,
+      "types": ["grass", "poison"],
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"
+    },
+    {
+      "id": 4,
+      "name": "charmander",
+      "korean_name": "파이리",
+      "height_dm": 6,
+      "weight_hg": 85,
+      "types": ["fire"],
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+    },
+    {
+      "id": 7,
+      "name": "squirtle",
+      "korean_name": "꼬부기",
+      "height_dm": 5,
+      "weight_hg": 90,
+      "types": ["water"],
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+    }
+  ]
+}
